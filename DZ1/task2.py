@@ -7,7 +7,7 @@
 '''
 
 S = int(input("Введите общее количество журавликов: "))
-Petya = S // 6
-Seryozha = S // 6
-Katya = (S // 6) * 4
+Katya = (S // 3) * 2
+Petya = (Katya // 2) // 2
+Seryozha = Petya
 print(f"Катя сделала {Katya}\nПетя сделал {Petya}\nСерёжа сделал {Seryozha}")

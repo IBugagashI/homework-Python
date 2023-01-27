@@ -3,4 +3,4 @@ number = input('Ведите число: ')
 sum = 0
 for i in range(len(number)):
     sum += int(number[i])
-print(f"Сумма чисел введённого числа : {sum}")
+print(f"Сумма отдельных чисел введённого числа : {sum}")

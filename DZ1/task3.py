@@ -7,5 +7,31 @@
 программу, которая проверяет счастливость билета.
 '''
 
-number = int(input("Введите число: "))
-print(f"Ваше число {number}")
+'''
+Решение 1
+
+number = int(input("Введите номер билета: "))
+digit1 = number // 10**5
+digit2 = (number % 10**5) // 10 ** 4
+digit3 = (number % 10**4) // 10 ** 3
+digit4 = (number % 10**3) // 10 ** 2
+digit5 = (number % 10**2) // 10
+digit6 = number % 10
+print(f"Ваш билет {number}")
+if (digit1 + digit2 + digit3) == (digit4 + digit5 + digit6):
+    print("YES")
+else:
+    print("NO")
+'''
+
+# Решение 2
+number = input("Введите номер билета: ")
+half1 = int(number[0]) + int(number[1]) + int(number[2])
+half2 = int(number[3]) + int(number[4]) + int(number[5])
+print(f"Ваш билет {number}")
+if half1 == half2:
+    print("YES")
+else:
+    print("NO")
+
+

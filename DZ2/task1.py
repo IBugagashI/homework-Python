@@ -21,3 +21,7 @@ for i in range(len(money)):
     else:
         tails += 1
 print(f"Всего монет - {len(money)}\nИз них орлом вверх - {eagle}, а решкой вверх - {tails}\n{money}")
+if eagle > tails:
+    print("Переверни монетки с орлом")
+else:
+    print("Переверни монетки с решкой")

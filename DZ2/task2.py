@@ -13,7 +13,7 @@ sum = int(input("Введите сумму чисел: "))
 product = int(input("Введите произведение чисел: "))
 flag = False
 for x in range(sum):
-    if flag == True:
+    if flag:
         break
     for y in range(product):
         if sum == x + y and product == x * y:

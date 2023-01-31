@@ -12,13 +12,12 @@
 '''
 import random
 
-n = int(input("Введите число монет: "))
-money = random.choices(range(0, 2), k=n)
+money = random.choices(range(0, 2), k = int(input("Введите число монет: ")))
 eagle = 0
 tails = 0
-for i in range(n):
+for i in range(len(money)):
     if money[i] > 0:
         eagle += 1
     else:
         tails += 1
-print(f"Всего монет {n}\nИз них орёл {eagle}, а решка {tails}\n{money}")
+print(f"Всего монет - {len(money)}\nИз них орлом вверх - {eagle}, а решкой вверх - {tails}\n{money}")

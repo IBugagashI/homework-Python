@@ -9,3 +9,13 @@
 5 6 -> 2 3
 '''
 
+sum = int(input("Введите сумму чисел: "))
+product = int(input("Введите произведение чисел: "))
+flag = False
+for x in range(sum):
+    if flag == True:
+        break
+    for y in range(product):
+        if sum == x + y and product == x * y:
+            print(f"x = {x}\ny = {y}") 
+            flag = True

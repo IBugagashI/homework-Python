@@ -20,7 +20,8 @@ for i in range(len(money)):
         eagle += 1
     else:
         tails += 1
-print(f"Всего монет - {len(money)}\nИз них орлом вверх - {eagle}, а решкой вверх - {tails}\n{money}")
+print(f"Всего монет - {len(money)}\nИз них орлом вверх - {eagle}, а решкой вверх - {tails}\n",*money)
+print(min(eagle, tails))
 if eagle > tails:
     print("Переверни монетки с орлом")
 else:

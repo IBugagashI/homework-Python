@@ -8,7 +8,7 @@
 4 4 -> 2 2
 5 6 -> 2 3
 '''
-
+'''
 sum = int(input("Введите сумму чисел: "))
 product = int(input("Введите произведение чисел: "))
 flag = False
@@ -19,3 +19,15 @@ for x in range(sum):
         if sum == x + y and product == x * y:
             print(f"x = {x}\ny = {y}") 
             flag = True
+
+'''
+# Решение 2
+
+sum = int(input("Введите сумму чисел: "))
+product = int(input("Введите произведение чисел: "))
+x = 1
+y = sum -1
+while (x * y < product):
+    x += 1
+    y -= 1
+print(f"Загаданные числа: \nx = {x}\ny = {y} ")

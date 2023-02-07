@@ -8,3 +8,39 @@
 6
 -> 5
 '''
+import random
+
+# Решение 3
+# list_1 = random.choices(range(0, 11), len_list = int(input("Укажите длину списка: ")))
+list_1 = list(map(int, input("Укажите числа для списка, через пробел: ").split()))
+x = int(input("Укажите число для поиска: "))
+near = list_1[0]
+for i in list_1:
+    if near <= i <= x:
+        near = i
+print(print(f'\nЧисло "{x}", число приближённое к нему "{near}"'))
+
+'''
+# Решение 2
+
+len_list = int(input("Укажите длину списка: ")) # "Пользователь в первой строке вводит натуральное число N – количество элементов в массиве."
+list_1 = [0] * len_list
+for i in range(len(list_1)):
+    list_1[i] = int(input(f"Укажите {i+1} число: ")) # "В последующих строках записаны N целых чисел A[i]."
+x = int(input("Укажите число для поиска: "))
+near = list_1[0]
+
+Решение 1
+
+len_list = int(input("Укажите длину списка: "))
+x = int(input("Укажите число для поиска: "))
+list_1 = [0] * len_list
+near = list_1[0]
+print("Наш список: ", end='')
+for i in range(len(list_1)):
+    list_1[i] = random.randint(0, 100)
+    if near <= list_1[i] <= x:
+        near = list_1[i]
+    print(list_1[i], end=' ')
+print(f'\nЧисло "{x}", число приближённое к нему "{near}"')
+'''

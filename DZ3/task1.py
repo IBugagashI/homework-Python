@@ -10,3 +10,23 @@
 3
 -> 1
 '''
+import random
+
+len_list = int(input("Укажите длину списка: "))
+x = int(input("Укажите число для поиска: "))
+list_1 = [0] * len_list
+count = 0
+print("Наш список: ", end='')
+for i in range(len(list_1)):
+    list_1[i] = random.randint(0, 10)
+    if x == list_1[i]:
+        count += 1
+    print(list_1[i], end=' ')
+print(f'\nЧисел "{x}" в списке: {count}')
+
+
+
+
+
+
+# len_list = random.choices(range(0, 11), k = int(input("Укажите длину списка: ")))

@@ -9,5 +9,5 @@ number = int(input('Введите число N: '))
 k = 0
 print(f"Целые степени двойки до {number}: ", end='')
 while number > (2**k):
-    print(2**k,  end=' ')
+    print(2**k, end='')
     k += 1

@@ -18,8 +18,8 @@ near = list_1[0]
 for i in list_1:
     if near <= i <= x:
         near = i
-print(print(f'\nЧисло "{x}", число приближённое к нему "{near}"'))
-
+print(f"Наш список: {list_1}")
+print(f'Число "{x}", число приближённое к нему "{near}"')
 '''
 # Решение 2
 

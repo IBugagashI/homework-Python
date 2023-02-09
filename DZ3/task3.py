@@ -22,6 +22,7 @@ Q, Z – 10 очков.
 Вывод:
 12
 '''
+classmethod dict.fromkeys(seq[, value])
 
 import re
 
@@ -41,7 +42,6 @@ eng = {'AEIOULNSTR':1,
 'QZ':10}
 word = input("Введите слово: ").upper()
 count = 0
-
 if re.search('[а-яА-Я]', word):
     for i in word:
         for key, element in rus.items():

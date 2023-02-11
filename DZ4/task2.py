@@ -11,8 +11,10 @@
 '''
 import random
 
-bushes = random.choices(range(0, 2), k = int(input("Введите количество кустов: ")))
-#bushes = list(map(int, input("Укажите сколько ягод на каждом кусте, через пробел: ").split())) # пользователь вводит сам элементы 
+#bushes = random.choices(range(0, 2), k = int(input("Введите количество кустов: "))) # пользователь вводит сам колличество кустов. 
+#bushes = list(map(int, input("Укажите сколько ягод на каждом кусте, через пробел: ").split())) # пользователь вводит сам колличество ягод.
+size = int(input("Введите количество кустов: "))
+bushes = [int(input(f'Сколько ягод на {i + 1} кусте: ')) for i in range(size)] # 
 grip = 0
 for i in range(len(bushes) - 1):
     if grip < bushes[i-1] + bushes[i] + bushes[i+1]:

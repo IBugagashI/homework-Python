@@ -13,8 +13,8 @@
 '''
 # условие ввода 3
 
-list_1 = list(map(int, input("Укажите числа для множества 1, через пробел: ").split()))
-list_2 = list(map(int, input("Укажите числа для множества 2, через пробел: ").split()))
+list_1 = list(map(int, input("Укажите числа для множества 1, через пробел: ").split())) # пользователь вводит сами элементы множеств 1.
+list_2 = list(map(int, input("Укажите числа для множества 2, через пробел: ").split())) # пользователь вводит сами элементы множеств 2.
 set_list_1 = set(list_1)
 set_list_2 = set(list_2)
 result = set_list_1.intersection(set_list_2)
@@ -27,7 +27,6 @@ import random
 
 list_1 = random.choices(range(0, 20), k = int(input("Введите рамер первого множества: ")))
 list_2 = random.choices(range(0, 20), k = int(input("Введите рамер второго множества: ")))
-print(list_1, list_2)
 set_list_1 = set(list_1)
 set_list_2 = set(list_2)
 result = set_list_1.intersection(set_list_2)

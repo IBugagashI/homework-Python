@@ -10,4 +10,4 @@ def sum(a = int(input('Первое число: ')), b = int(input('Второе
         return a
     return sum(a+1, b-1)
     
-print(sum())
+print(f'Сумма чисел: {sum()}')

@@ -22,7 +22,7 @@ Q, Z – 10 очков.
 Вывод:
 12
 '''
-classmethod dict.fromkeys(seq[, value])
+#classmethod dict.fromkeys(seq[, value])
 
 import re
 

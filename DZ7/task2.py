@@ -17,5 +17,21 @@ print_operation_table(lambda x, y: x * y)
 6 12 18 24 30 36 
 '''
 
+'''
+# № 1
+
+def print_operation_table(operation, num_rows = 6, num_columns = 6): # post - столбец, line - строка
+    for line in range(1, num_rows + 1):
+        total = []
+        for post in range(1, num_columns + 1):
+            total.append(operation(post, line))
+        print(*total, sep = '\t')
+print_operation_table(lambda x, y: x * y)
+'''
+# № 2
+
 def print_operation_table(operation, num_rows = 6, num_columns = 6):
-    
+    total = [[operation(line, post) for line in range(1, num_rows + 1)] for post in range(1, num_columns + 1)]
+    print(*total, sep ='\n')
+
+print_operation_table(lambda x, y: x * y)

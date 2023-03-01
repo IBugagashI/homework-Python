@@ -45,7 +45,7 @@ def filter_data(filter_string):
     if not is_found:
         print('Запись не найдена!')
 
-def editing_data():
+def editing_data(): # Замена
     meaning = set_value()
     with open(file_name, 'r', encoding= 'utf-8') as file:
         old_str = file.readlines()
@@ -66,7 +66,7 @@ def editing_data():
             else:
                 file.write(element)
 
-def delet_data():
+def delet_data(): # Удаление
     meaning = set_value()
     with open(file_name, 'r', encoding='utf-8') as file:
         old_str = file.readlines()        

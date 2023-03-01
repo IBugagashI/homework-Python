@@ -13,3 +13,6 @@ def phone_data():
 def adress_data():
     adress = input('Введите ваш адрес: ')
     return adress
+def set_value():
+    meaning = input('Введите искомый элемент для замены: ')
+    return meaning

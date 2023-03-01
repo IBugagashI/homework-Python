@@ -3,6 +3,7 @@ import os
 from data_create import name_data, surname_data, phone_data, adress_data
 
 file_name = 'data.txt'
+file_name2 = 'data2.txt'
 
 def print_data():
     if os.path.exists(file_name):
@@ -21,7 +22,7 @@ def input_data():
     phone = phone_data()
     adress = adress_data()
     with open(file_name, 'a', encoding= 'utf-8') as file:
-        file.write(f'{name}; {surname}; {phone}; {adress}\n')
+        file.write(f'{name};{surname};{phone};{adress}\n')
 
 def filter_data(filter_string):
     with open(file_name, 'r', encoding= 'utf-8') as file:
@@ -43,3 +44,24 @@ def filter_data(filter_string):
                 is_found = True
     if not is_found:
         print('Запись не найдена!')
+
+def editing_data(meaning, new_sense):
+    with open(file_name, 'r', encoding= 'utf-8') as file:
+        old_str = file.readlines()
+
+    with open(file_name, 'w', encoding= 'utf-8') as file:
+        for element in old_str:
+            if meaning in element:
+                element = element.replace(meaning, new_sense, 1)
+                file.write(element)
+            else:
+                file.write(element)
+
+def delet_data():
+    with open(file_name, 'r', encoding='utf-8') as file:
+        old_str = file.readlines()        
+
+    
+    # with open(file_name, 'w', encoding= 'utf-8') as file:
+    #     for element in old_data:
+    #         file.write((element.replace(meaning, new_sense)).split(';') + '\n')

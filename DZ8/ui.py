@@ -1,4 +1,4 @@
-from logger import print_data, input_data, filter_data, editing_data
+from logger import print_data, input_data, filter_data, editing_data, delet_data
 
 def interface():
     print('''Выберите режим работы: 
@@ -9,7 +9,7 @@ def interface():
             5 - удаление данных 
             ''')
     command_namber = int(input('Введите номер режима: '))
-    while command_namber < 1 or command_namber > 4:
+    while command_namber < 1 or command_namber > 5:
         print('Введите корректный номер режима!')
         command_namber = int(input('Введите номер режима: '))
 
@@ -22,6 +22,6 @@ def interface():
         filter_string = input()
         filter_data(filter_string)
     elif command_namber == 4:
-        meaning = input('Введите искомый элемент для замены: ')
-        new_sense = input('На что меняем: ')
-        editing_data(meaning, new_sense)
+        editing_data()
+    elif command_namber == 5:
+        delet_data()

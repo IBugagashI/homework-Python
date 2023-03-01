@@ -35,7 +35,7 @@ print(vinniу(input('Введите текст стиха: ')))
 # №2
 
 vowels = 'АОУЫЭЕЁИЮЯ'
-poem = input('Введите текст стиха: ').upper().split()
-count = [sum(i in vowels for i in x) for x in poem]
-print(*count)
-print("Парам пам-пам" if len(set(count)) == 1 else "Пам парам")
+# poem = input('Введите текст стиха: ').upper().split()
+# count = [sum(i in vowels for i in x) for x in poem]
+# print(*count)
+# print("Парам пам-пам" if len(set(count)) == 1 else "Пам парам")

@@ -1,6 +1,6 @@
 import os
 
-from data_create import name_data, surname_data, phone_data, adress_data
+from data_create import name_data, surname_data, phone_data, adress_data, set_value
 
 file_name = 'data.txt'
 file_name2 = 'data2.txt'
@@ -45,23 +45,39 @@ def filter_data(filter_string):
     if not is_found:
         print('Запись не найдена!')
 
-def editing_data(meaning, new_sense):
+def editing_data():
+    meaning = set_value()
     with open(file_name, 'r', encoding= 'utf-8') as file:
         old_str = file.readlines()
-
     with open(file_name, 'w', encoding= 'utf-8') as file:
         for element in old_str:
-            if meaning in element:
-                element = element.replace(meaning, new_sense, 1)
-                file.write(element)
+            if meaning.lower() in element.lower():
+                print(f'\n*** {element} \tЭто нужный контакт? ***')
+                yes_or_no = int(input('\nВведите 1 - ДА, 0 - НЕТ: '))
+                if yes_or_no == 1:
+                    print('\n| 1 - Имя | 2 - Фамилия | 3 - Телефон | 4 - Адрес |')
+                    i = int(input('Введие номер элемента для замены: '))
+                    new = element.split(';')
+                    new[i - 1] = input('\nНа что меняем: ')
+                    file.write(";".join(new))
+                    print('\n\t***Замена произведена***')
+                else:
+                    file.write(element) 
             else:
                 file.write(element)
 
 def delet_data():
+    meaning = set_value()
     with open(file_name, 'r', encoding='utf-8') as file:
         old_str = file.readlines()        
-
-    
-    # with open(file_name, 'w', encoding= 'utf-8') as file:
-    #     for element in old_data:
-    #         file.write((element.replace(meaning, new_sense)).split(';') + '\n')
+    with open(file_name, 'w', encoding= 'utf-8') as file:
+        for element in old_str:
+            if meaning.lower() in element.lower():
+                print(f'"{element}" - это нужный контакт?')
+                yes_or_no = int(input('Введите 1 - ДА, 0 - НЕТ: '))
+                if yes_or_no == 1:
+                    print('Контакт удалён') 
+                else:
+                    file.write(element)              
+            else:
+                file.write(element)
